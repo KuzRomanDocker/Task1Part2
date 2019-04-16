@@ -33,9 +33,9 @@ RUN echo 'Hello user2!' > /var/www/html/index.html
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
 
 # 2- Создание нового образа
-docker build -t user:v1 .
+docker build -t user:v2 .
 # 3 - Запуск
-docker run -d -p 82:80 user:v1
+docker run -d -p 82:80 user:v2
 
 # 4 - Проверка
 curl http://localhost:82/index.html
